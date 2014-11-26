@@ -1,0 +1,23 @@
+set allow_8bit=yes
+set ascii_chars=yes
+set charset="utf-8"
+set send_charset="utf-8:koi8-r:us-ascii"
+set editor="vim"
+set folder="~/Mail"
+set spoolfile="~/Mail/mbox"
+set mbox="~/Mail/mbox/"
+set mbox_type=Maildir
+set record="+sent"
+set postponed="+drafts"
+set envelope_from=yes
+set sendmail="/usr/local/bin/msmtp"
+set edit_headers = yes
+# set autoedit
+set sort_aux=date
+set sort=reverse-threads
+set reverse_name
+set signature="~/.mutt/signature"
+source "~/.mutt/private"
+source "~/.mutt/aliases"
+# source "~/.mutt/colors"
+source "~/.mutt/mutt-colors-solarized-light-256.muttrc"

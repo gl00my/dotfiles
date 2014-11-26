@@ -1,0 +1,16 @@
+servers = (
+  {
+    address = "TODO";
+    chatnet = "bitlbee";
+    port = "TODO";
+    password = "TODO";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    family = "inet";
+  }
+);
+
+chatnets = {
+  bitlbee = { type = "IRC"; username = "TODO/bitlbee"; };
+};
+
