@@ -1,1 +1,8 @@
+load ~/.irssi/modules/openurl.pl
+set openurl_app_http /usr/local/bin/firefox $$1 >/dev/null 2>/dev/null &
+set beep_msg_level MSGS NOTICES DCC DCCMSGS HILIGHT
+set beep_when_away ON
+set beep_when_window_active ON
+set bell_beeps ON
+
 /connect TODO

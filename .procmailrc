@@ -41,4 +41,3 @@ html/
 
 :0 Whc: .msgid.lock
 | $FORMAIL -D 16384 .msgid.cache
-

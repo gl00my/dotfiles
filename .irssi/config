@@ -14,3 +14,8 @@ chatnets = {
   bitlbee = { type = "IRC"; username = "TODO/bitlbee"; };
 };
 
+settings = {
+  "perl/core/scripts" = {
+    openurl_app_http = "/usr/local/bin/firefox $1 >/dev/null 2>/dev/null &";
+  };
+};
