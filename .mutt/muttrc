@@ -1,3 +1,5 @@
+auto_view text/html
+alternative_order text/plain text/enriched text/html
 set allow_8bit=yes
 set ascii_chars=yes
 set charset="utf-8"
