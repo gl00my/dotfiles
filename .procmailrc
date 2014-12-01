@@ -3,6 +3,9 @@ DEFAULT=$MAILDIR/mbox/
 LOGFILE=$MAILDIR/log
 LOCKFILE=$HOME/.lockmail
 
+:0 Whc: .msgid.lock
+| $FORMAIL -D 16384 .msgid.cache
+
 :0 # lkml
 * ^List-Id.*kernel\.org
 lkml/	
@@ -24,7 +27,7 @@ spam/
 bike/	
 
 :0 # socials
-* ^From.*@.*(twitter|vk\.com|odnoklassniki\.ru|facebook|plus\.google\.com)
+* ^From.*@.*(twitter|vk\.com|odnoklassniki\.ru|facebook|plus\.google\.com|vkontakte|youtube\.com)
 social/	
 
 :0 # paypal
@@ -32,12 +35,11 @@ social/
 paypal/	
 
 :0 # robots
-* ^From.*(donotreply@|noreply@|eprintcenter)
+* ^From.*(donotreply@|noreply@|no-reply@|eprintcenter)
 robots/
 
 :0
 * ^Content-[Tt]ype:.*html
 html/
 
-:0 Whc: .msgid.lock
-| $FORMAIL -D 16384 .msgid.cache
+
