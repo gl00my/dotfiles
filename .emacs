@@ -24,10 +24,10 @@
 (defun irc ()
   "Connect to irc"
   (interactive)
-  (erc-tls :server "znc.ru" :port 8888
-	   :nick "Peter" :password "password")
-  (erc-tls :server "znc.ru" :port 8888
-	   :nick "Peter" :password "password")
+  (erc-tls :server "znc.ru" :port 25
+	   :nick "Peter" :password "passw")
+  (erc-tls :server "znc.ru" :port 25
+	   :nick "Peter" :password "passw")
   )
   
 (setq lua-indent-level 8)
@@ -50,3 +50,5 @@
 (require 'erc-image)
 (add-to-list 'erc-modules 'image)
 (erc-update-modules)
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
