@@ -11,6 +11,11 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Terminus" :foundry "xos4" :slant normal :weight normal :height 143 :width normal)))))
 (setq path-to-ctags "/usr/local/bin/exctags") ;;
+(defun create-tags (dir-name)
+  "Create tags file."
+  (interactive "DDirectory: ")
+  (eshell-command 
+   (format "find %s -type f -name \"*.[ch]\" | etags -" dir-name)))
 (setq c-basic-offset 8)
 
 (require 'package)
@@ -64,3 +69,4 @@
   "Sort dired listings with directories first before adding marks."
   (mydired-sort))
 (require 'dired+)
+(setq scroll-step 1)
