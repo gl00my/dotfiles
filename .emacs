@@ -70,3 +70,6 @@
   (mydired-sort))
 (require 'dired+)
 (setq scroll-step 1)
+(require 'emms-setup)
+(emms-standard)
+(emms-default-players)
