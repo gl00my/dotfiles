@@ -73,3 +73,4 @@
 (require 'emms-setup)
 (emms-standard)
 (emms-default-players)
+(setf tls-checktrust t)
