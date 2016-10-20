@@ -70,7 +70,11 @@
   (mydired-sort))
 (require 'dired+)
 (setq scroll-step 1)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (require 'emms-setup)
 (emms-standard)
 (emms-default-players)
 (setf tls-checktrust t)
+(setq gnus-use-full-window nil)
