@@ -16,7 +16,10 @@
   (interactive "DDirectory: ")
   (eshell-command 
    (format "find %s -type f -name \"*.[ch]\" | etags -" dir-name)))
-(setq c-basic-offset 8)
+(setq default-tab-width 8)
+(setq-default c-basic-offset 8)
+(setq-default indent-tabs-mode t)
+(setq lua-indent-level 8)
 
 (require 'package)
 (add-to-list 'package-archives
@@ -35,8 +38,6 @@
 	   :nick "Peter" :password "passw")
   )
   
-(setq lua-indent-level 8)
-
 (setq user-mail-address "p_kosyh@factor-ts.ru")
 (setq user-full-name "Peter Kosyh")
 (setq gnus-select-method 
