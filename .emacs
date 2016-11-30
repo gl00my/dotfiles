@@ -81,3 +81,4 @@
 (setq gnus-use-full-window nil)
 (if (equal nil (equal major-mode 'org-mode))
     (windmove-default-keybindings 'meta))
+(add-to-list 'write-file-functions 'delete-trailing-whitespace)
