@@ -79,3 +79,5 @@
 (emms-default-players)
 (setf tls-checktrust t)
 (setq gnus-use-full-window nil)
+(if (equal nil (equal major-mode 'org-mode))
+    (windmove-default-keybindings 'meta))
