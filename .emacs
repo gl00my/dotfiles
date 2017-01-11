@@ -14,7 +14,7 @@
 (defun create-tags (dir-name)
   "Create tags file."
   (interactive "DDirectory: ")
-  (eshell-command 
+  (eshell-command
    (format "find %s -type f -name \"*.[ch]\" | etags -" dir-name)))
 (setq default-tab-width 8)
 (setq-default c-basic-offset 8)
@@ -37,10 +37,10 @@
   (erc-tls :server "znc.ru" :port 25
 	   :nick "Peter" :password "passw")
   )
-  
+
 (setq user-mail-address "p_kosyh@factor-ts.ru")
 (setq user-full-name "Peter Kosyh")
-(setq gnus-select-method 
+(setq gnus-select-method
             '(nnmaildir "mail" (directory "~/Mail"))
 	    mail-sources '((maildir :path "~/Mail/" :subdirs ("cur" "new")))
 	    mail-source-delete-incoming nil
@@ -62,7 +62,7 @@
   "Sort dired listings with directories first."
   (save-excursion
     (let (buffer-read-only)
-      (forward-line 2) ;; beyond dir. header 
+      (forward-line 2) ;; beyond dir. header
       (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
     (set-buffer-modified-p nil)))
 (defadvice dired-readin
@@ -82,3 +82,4 @@
 (if (equal nil (equal major-mode 'org-mode))
     (windmove-default-keybindings 'meta))
 (add-to-list 'write-file-functions 'delete-trailing-whitespace)
+(setq speedbar-show-unknown-files t)
