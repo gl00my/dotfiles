@@ -84,3 +84,4 @@
 (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 (setq speedbar-show-unknown-files t)
 (setq dired-dwim-target t)
+(scroll-bar-mode -1)
