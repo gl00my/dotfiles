@@ -4,12 +4,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tango-dark))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Terminus" :foundry "xos4" :slant normal :weight normal :height 143 :width normal)))))
 (setq path-to-ctags "/usr/local/bin/exctags") ;;
 (defun create-tags (dir-name)
   "Create tags file."
@@ -85,3 +79,24 @@
 (setq speedbar-show-unknown-files t)
 (setq dired-dwim-target t)
 (scroll-bar-mode -1)
+
+(custom-set-faces
+ '(default ((t (:family "Terminus" :height 140))))
+ '(variable-pitch ((t (:family "Liberation Sans" :height 140)))))
+
+(copy-face 'default 'fixed-pitch)
+
+(defun fixed-pitch-mode ()
+  (buffer-face-mode -1))
+
+(defun variable-pitch-mode ()
+  (buffer-face-mode t))
+
+(defun toggle-pitch (&optional arg)
+  "Switch between the `fixed-pitch' face and the `variable-pitch' face"
+  (interactive)
+  (buffer-face-toggle 'variable-pitch))
+
+;; enable buffer-face mode to provide buffer-local fonts
+(buffer-face-mode)
+(add-hook 'eww-mode-hook 'variable-pitch-mode)
