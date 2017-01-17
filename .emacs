@@ -83,7 +83,7 @@
 
 (custom-set-faces
  '(default ((t (:family "Terminus" :height 140))))
- '(variable-pitch ((t (:family "Liberation Sans" :height 140)))))
+ '(variable-pitch ((t (:family "Liberation Sans")))))
 
 (copy-face 'default 'fixed-pitch)
 
