@@ -79,6 +79,7 @@
 (setq speedbar-show-unknown-files t)
 (setq dired-dwim-target t)
 (scroll-bar-mode -1)
+(menu-bar-mode -1)
 
 (custom-set-faces
  '(default ((t (:family "Terminus" :height 140))))
